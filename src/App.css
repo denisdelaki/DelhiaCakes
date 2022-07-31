@@ -8,15 +8,18 @@ body{
    justify-content: space-between;
    padding: 2em;
  background-color: #31525B;
- color:white;
+ color: white;
  border: 1px solid;
 height:5rem;
  width: 100%;
+ z-index: 1000;
+ 
 }
 nav{ 
   overflow: hidden;
   margin: auto;
   padding-top: 20px;
+  
 }
 
 nav a{
@@ -27,15 +30,76 @@ nav a{
   font-size: 2em;
   text-decoration: none;
 }
-nav a:active, nav a:hover,nav a:focus
+nav a:active, nav a:hover
 {
   color:#31525B;
   background-color: white;
   height: 1rem;
+}
+nav a:focus{
+  background-color: #FFA101;
+  color: #31525B;
 }
 .name{
   color: white;
   float: left;
   
 }
-
+.cakecard{
+  border: 1px solid ;
+  height: 60vh;
+  width: 25rem;
+  margin: 1.5rem;
+  color: white;
+  background-color: #31525B;
+  box-shadow: 1.5rem 0.5rem 1rem rgb(104, 101, 101);
+  border: none;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  cursor: pointer;
+}
+.cakecard:hover{
+  transform: scale(1.1);
+}
+.content{
+    padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+.cartbutton{
+  overflow: hidden;
+  height: 2.3rem;
+  width: 7rem;
+  font-size: 1.1rem;
+ margin-left: 30%;
+ border: none;
+ position: relative;
+ bottom: 1.4rem;
+ box-shadow: 4px 4px 4px 3px;
+}
+.cartbutton:hover{
+  cursor: progress;
+  color: white;
+  background-color: black;
+   box-shadow: 1px 1px 1px ;
+}
+.cartbutton:focus{
+  color:#31525B;
+  background-color:white;
+}
+#cakes{
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  top: 10rem; 
+  display: inline-block;
+  position: relative;
+  left: 2rem;
+   flex-wrap: wrap; 
+  justify-content: space-evenly;  
+}
+#cakes h4:hover{
+color: #FFA101;
+}

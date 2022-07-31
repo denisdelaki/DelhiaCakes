@@ -5,7 +5,9 @@ function Header() {
   return (
     <div id="header">
       <div>
-        <h1 className="name">DELHIA CAKES</h1>
+        <h1 className="name">
+          <span style={{color:"chocolate"}}>DEL</span>HIA BAKERS
+        </h1>
         <h4>Making Every Celebration Sweeter.</h4>
       </div>
       <div>

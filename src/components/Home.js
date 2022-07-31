@@ -1,10 +1,15 @@
 import React from "react";
-
-function Home() {
+import Product from "./Products";
+function Home({cakes}) {
+    
+    const delhiacakes = cakes.map((cake) => {
+        return <Product cake={cake} />
+  })
+    
   return (
-      <>
-      <h1>Home</h1>
-    </>
+      <div>
+    {delhiacakes}
+    </div>
   );
 }
 export default Home;
