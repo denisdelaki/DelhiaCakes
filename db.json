@@ -1,0 +1,84 @@
+{
+    "cakes":[{
+               "id": 1,
+               "name": "Black forest cake",
+               "price": "KSh. 2,000",
+               "quantity": "1.5kg",
+               "available": 10,
+               "image": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBmb3Jlc3QlMjBjYWtlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+             },
+    {
+      "id": 2,
+      "name": "Sweet Vanilla cake",
+      "price": "KSh. 1,600",
+      "quantity": "1kg",
+      "available": 0,
+      "image": "https://images.unsplash.com/photo-1626552473087-db08c9bb4843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHN3ZWV0JTIwdmFuaWxsYSUyMGNha2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 3,
+      "name": "White forest cake",
+      "price": "KSh. 2,000",
+      "quantity": "2kg",
+      "available": 16,
+      "image": "https://media.istockphoto.com/photos/white-forest-cake-picture-id1142391733?b=1&k=20&m=1142391733&s=170667a&w=0&h=5Db6tkEDWB0ZRxYXddkYzNbAIAxNoi80ZlMpIjgFOh0="
+    },
+     {
+       "id": 4,
+       "name": "Carrot cake",
+       "price": "KSh. 3,200",
+       "quantity": "1kg",
+       "available": 30,
+       "image": "https://media.istockphoto.com/photos/carrot-cake-picture-id182805873?b=1&k=20&m=182805873&s=170667a&w=0&h=CxKZbp9kMoz5yuoRV8BjmmWhd5gtkAg4Ec5jxMKJXGo="
+     },
+    {
+      "id": 5,
+      "name": "Blueberry cake",
+      "price": "KSh. 2,300",
+      "quantity": "1.3kg",
+      "available": 0,
+      "image": "https://happycakes.co.ke/wp-content/uploads/2021/05/WhatsApp-Image-2022-07-03-at-1.32.31-PM-1.jpeg"
+    },
+     {
+       "id": 6,
+       "name": "Chocolate Mania cake",
+       "price": "KSh. 2,000",
+       "quantity": "1kg",
+       "available": 12,
+       "image": "https://happycakes.co.ke/wp-content/uploads/2021/01/WhatsApp-Image-2022-06-28-at-12.18.05-PM.jpeg"
+     },
+     {
+       "id": 7,
+       "name": "Caramel cake",
+       "price": "KSh. 2,500",
+       "quantity": "1.5kg",
+       "available":0,
+       "image": "https://media.istockphoto.com/photos/caramel-cake-picture-id1337309105?b=1&k=20&m=1337309105&s=170667a&w=0&h=uij8iI2VrdEG5eJErk88sqwc6oiOQN8ovE8Wh7kgYpI="
+     },
+       {
+         "id": 8,
+         "name": "Spiderman  cake",
+         "price": "KSh. 5,000",
+         "quantity": "2kg",
+         "available": 10,
+         "image": "https://happycakes.co.ke/wp-content/uploads/2022/05/WhatsApp-Image-2022-05-04-at-12.51.43-PM.jpeg"
+       },
+        {
+          "id": 9,
+          "name": "white strawberry cake",
+          "price": "KSh. 2,000",
+          "quantity": "1.5kg",
+          "available": 10,
+          "image": "https://happycakes.co.ke/wp-content/uploads/2021/01/White-Strawberry-Cake.jpg"
+        },
+         {
+           "id": 10,
+           "name": "American Heritage  cake",
+           "price": "KSh. 3,000",
+           "quantity": "2kg",
+           "available": 1,
+           "image": "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2hpdGUlMjBzdHJhd2JlcnJ5JTIwY2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+         }
+
+]
+}
