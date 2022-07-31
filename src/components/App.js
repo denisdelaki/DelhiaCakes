@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Cart from "./Cart";
-import Classes from "./Classes";
+import Classes from "./Custom";
  import "../App.css";
 import Home from "./Home";
 import { Routes, Route } from "react-router-dom";
