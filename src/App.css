@@ -1,4 +1,41 @@
-.App {
-  text-align: center;
+body{
+  background-color: #FFA101;
+}
+#header{
+   position: fixed;
+   top: 0%;
+   display: flex;
+   justify-content: space-between;
+   padding: 2em;
+ background-color: #31525B;
+ color:white;
+ border: 1px solid;
+height:5rem;
+ width: 100%;
+}
+nav{ 
+  overflow: hidden;
+  margin: auto;
+  padding-top: 20px;
+}
+
+nav a{
+  color: white;
+ margin-right: 2.5rem;
+  padding: 1em;
+  margin-left: 5rem;
+  font-size: 2em;
+  text-decoration: none;
+}
+nav a:active, nav a:hover,nav a:focus
+{
+  color:#31525B;
+  background-color: white;
+  height: 1rem;
+}
+.name{
+  color: white;
+  float: left;
+  
 }
 
