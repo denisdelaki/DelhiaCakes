@@ -1,6 +1,6 @@
 import React from "react";
 import Product from "./Products";
-function Home({cakes}) {
+function Home({cakes, onAddCart}) {
     
     const delhiacakes = cakes.map((cake) => {
         return <Product cake={cake} />

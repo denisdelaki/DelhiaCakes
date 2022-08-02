@@ -119,6 +119,13 @@ color: #FFA101;
   height: 2rem;
   width: 90%;
   margin: 0.6rem;
+  border: none;
+  
+}
+#customorder input:focus{
+box-shadow: 0.5rem 0.6rem;
+border: none;
+
 }
 .orderbutton{
   position: relative;

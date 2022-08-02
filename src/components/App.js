@@ -12,14 +12,17 @@ function App() {
     fetch("http://localhost:8004/cakes")
       .then(res => res.json())
     .then(cakes=>setCakes(cakes))
- }, [])
+  }, [])
+  function onAddCart() {
+    console.log("added to the cart")
+  }
   return (
     <>
       <Header />
       <Routes>
-        <Route exact path="/home" element={<Home cakes={cakes} />}></Route>
+        <Route exact path="/home" element={<Home cakes={cakes} onAddCart={onAddCart} />}></Route>
         <Route exact path="/custom" element={<Custom />}></Route>
-        <Route exact path="/cart" element={<Cart />}></Route>
+        <Route exact path="/cart" element={<Cart onAddCart={onAddCart} />}></Route>
        
       </Routes>
       

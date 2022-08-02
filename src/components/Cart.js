@@ -1,7 +1,9 @@
 import React from "react";
-function Cart() {
+function Cart({onAddCart}) {
     return (
-   <></>
+        <div>
+            
+      </div>
             
     )
 }

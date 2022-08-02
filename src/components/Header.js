@@ -11,6 +11,12 @@ function Header() {
         <h3>Making Every Celebration Sweeter.</h3>
       </div>
       <div>
+        <input
+          type="search"
+          placeholder="Search..."
+        />
+      </div>
+      <div>
         <Nav />
       </div>
     </div>
