@@ -1,5 +1,6 @@
 body{
   background-color: #FFA101;
+  display: block;
 }
 #header{
    position: fixed;
@@ -102,4 +103,32 @@ nav a:focus{
 }
 #cakes h4:hover{
 color: #FFA101;
+}
+#customorder{
+  border: none;
+  position: relative;
+  top: 12rem;
+  margin: auto;
+  height: 75vh;
+  width: 30%;
+  padding: 1.5em;
+  background-color: #31525B;
+  color: white;
+}
+#customorder input{
+  height: 2rem;
+  width: 90%;
+  margin: 0.6rem;
+}
+.orderbutton{
+  position: relative;
+  left: 40%;
+  height: 2.5rem;
+  width: 6rem;
+  font-size: 1.5rem;
+  border: none;
+  margin-top: 1rem;
+}
+.asterisk{
+  color: red;
 }

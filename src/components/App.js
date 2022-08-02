@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Cart from "./Cart";
-import Classes from "./Custom";
+import Custom from "./Custom";
  import "../App.css";
 import Home from "./Home";
 import { Routes, Route } from "react-router-dom";
@@ -18,7 +18,7 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/home" element={<Home cakes={cakes} />}></Route>
-        <Route exact path="/classes" element={<Classes />}></Route>
+        <Route exact path="/custom" element={<Custom />}></Route>
         <Route exact path="/cart" element={<Cart />}></Route>
        
       </Routes>

@@ -8,7 +8,7 @@ function Header() {
         <h1 className="name">
           <span style={{color:"chocolate"}}>DEL</span>HIA BAKERS
         </h1>
-        <h4>Making Every Celebration Sweeter.</h4>
+        <h3>Making Every Celebration Sweeter.</h3>
       </div>
       <div>
         <Nav />
