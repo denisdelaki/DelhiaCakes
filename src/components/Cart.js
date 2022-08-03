@@ -1,5 +1,5 @@
 import React from "react";
-function Cart({onAddCart}) {
+function Cart({onAddCart, cart, setCart}) {
     return (
         <div>
             
