@@ -7,7 +7,7 @@ function Nav() {
           
             <NavLink to="/home">Home</NavLink>
             <NavLink to="/custom">Custom Orders</NavLink>
-            <NavLink to="/cart">Cart</NavLink>
+            <NavLink to="/cart">Cart <span>0</span></NavLink>
        </nav>
     )
 }

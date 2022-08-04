@@ -12,18 +12,21 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:8004/cakes")
       .then(res => res.json())
-    .then(cakes=>setCakes(cakes))
+      .then(cakes => setCakes(cakes))
+    
   }, [])
   function onAddCart(cake) {
-    setCart([...cart, cake])
+    const mycart=[...cart, cake]
+    setCart(mycart)
   }
+ 
   return (
     <>
       <Header />
       <Routes>
         <Route exact path="/home" element={<Home cakes={cakes} onAddCart={onAddCart} />}></Route>
         <Route exact path="/custom" element={<Custom />}></Route>
-        <Route exact path="/cart" element={<Cart onAddCart={onAddCart} cart={cart} setCart={setCart} />}></Route>
+        <Route exact path="/cart" element={<Cart  cart={cart} setCart={setCart} />}></Route>
        
       </Routes>
       

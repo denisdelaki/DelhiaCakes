@@ -139,3 +139,52 @@ border: none;
 .asterisk{
   color: red;
 }
+.carttable{
+  border: 1px solid;
+  
+
+}
+.imagecart{
+  height: 200px;
+  width: 200px;
+
+}
+#cartcard{
+  position: absolute;
+  top: 10rem;
+  height:auto;
+  width: 40%;
+  padding: 2rem;
+  margin: 0 5rem;
+  background-color: #31525B;
+  color: white;
+}
+.cartTable{
+   color: white;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.checkout{
+  height: 2.5rem;
+  width: 10rem;
+  font-size: 1.5rem;
+  color:#31525B;
+  background-color:#FFA101;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 1rem;
+
+}
+.deletecart{
+  height:2rem ;
+  width: 6rem;
+  border: none;
+  background-color: #FFA101;
+  color: #31525B;
+  margin: 0.5rem;
+}
+.quant{
+  height: 1rem;
+  width: 2rem;
+}
