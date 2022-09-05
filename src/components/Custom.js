@@ -11,13 +11,12 @@ function Custom() {
     description:""
   })
   function handleChange(e) {
-    const key = e.target.id
-    setCustomeOrders({ ...customorders, [key]: e.target.value
-  })
+    const key = e.target.id;
+    setCustomeOrders({ ...customorders, [key]: e.target.value });
   }
-  function handleSubmit(e) {
-    e.preventDefault()
-    fetch(" http://localhost:8004/orders", {
+  function handleOrders(e) {
+    e.preventDefault();
+    fetch(" http://localhost:8004/custom", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,23 +24,30 @@ function Custom() {
       body: JSON.stringify({
         fullname: customorders.fullname,
         email: customorders.email,
-        cake: customorders.cake,
+        cake: customorders.cakecake,
         quantity: customorders.quantity,
+        phonenumber: customorders.phonenumber,
         image: customorders.image,
-        description: customorders.description
-      })
+        description: customorders.description,
+      }),
     })
-      .then(res => res.json())
-      .then(customorders => {
-        setCustomeOrders({ ...customorders, fullname: "", email:"", quantity:"", phonenumber:"", image:"", description:"" })
-      
-          })
-        
-    }
-  
+      .then((r) => r.json())
+      .then((customorders) => {
+        setCustomeOrders({
+          ...customorders,
+          fullname: "",
+          email: "",
+          quantity: "",
+          phonenumber: "",
+          image: "",
+          description: "",
+        });
+      });
+  }
+    
   return (
     <div>
-      <form id="customorder" onSubmit={handleSubmit}>
+      <form id="customorder" onSubmit={handleOrders}>
         <h1>Delhia Bakers</h1>
         <h4>Custom Orders</h4>
         <label>
@@ -53,8 +59,8 @@ function Custom() {
           name="fullname"
           id="fullname"
           placeholder="Full Name"
-          onChange={handleChange}
           value={customorders.fullname}
+          onChange={handleChange}
           required
         />{" "}
         <br />
@@ -131,8 +137,8 @@ function Custom() {
           cols="60"
           id="description"
           value={customorders.description}
-          onChange={handleChange}
           placeholder="Additional Description"
+          onChange={handleChange}
           name="description"
           style={{ marginLeft: "0.9rem" }}
         ></textarea>{" "}
