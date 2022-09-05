@@ -1,23 +1,20 @@
 import React from "react";
  import "../App.css";
 import Nav from "./Nav";
-function Header() {
+function Header({cart}) {
   return (
     <div id="header">
       <div>
         <h1 className="name">
-          <span style={{color:"chocolate"}}>DEL</span>HIA BAKERS
+          <span style={{ color: "chocolate" }}>DEL</span>HIA BAKERS
         </h1>
         <h3>Making Every Celebration Sweeter.</h3>
       </div>
       <div>
-        <input
-          type="search"
-          placeholder="Search..."
-        />
+        <input type="search" placeholder="Search..." />
       </div>
       <div>
-        <Nav />
+        <Nav cart={cart} />
       </div>
     </div>
   );
