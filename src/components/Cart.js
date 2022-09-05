@@ -1,23 +1,29 @@
 
 import React, {useState, useEffect} from "react";
-function Cart({ cart, setCart }) {
-  const [amount, setAmount]=useState(1)
-  const [price, setPrice] = useState(0)
-  useEffect(() => {
-    function handlePrice() {
-      let cartPrice = 0;
-      cart.map((cartItem) => (cartPrice += amount * cartItem.price));
-      setPrice(cartPrice);
-    }
-  })
+function Cart({ cart, onDeleteCart, setCart }) {
+  // const { id } = cart;
+  const [amount, setAmount] = useState(1);
+ let subTotal
+  function handleChange(e) {
+    setAmount(e.target.value);
+  }
  
-    
-  function handleChange(e ) {
-    setAmount(e.target.value)
-    
-   }
-
+  function handleCartDelete(cart_id) {
+    fetch(`http://localhost:8004/cakes/${cart_id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then(() => {
+        onDeleteCart(cart_id);
+        alert("Cart Item deleted successfully")
+      });
+  }
+  
+  let Total=cart.reduce((previousvalue, currentValue)=>previousvalue+currentValue.price, 0,)
+   
+   
   const thecart = cart.map((cartItem) => (
+    
     <div key={cartItem.id} className="cartTable">
       <div>
         <table className="carttable">
@@ -34,28 +40,43 @@ function Cart({ cart, setCart }) {
             <td>
               <span>
                 <label>
-                  <input className="quant" type="number" value={amount} onChange={handleChange} />
-              </label>
+                  <input
+                    className="quant"
+                    type="number"
+                    value={amount}
+                    onChange={handleChange}
+                  />
+                </label>
               </span>
             </td>
             <td>{cartItem.price}</td>
+            <td></td>
+            <td>{(subTotal = cartItem.price * amount)}</td>
             <td>
-              <button className="deletecart">Delete Cart</button>
+              <button
+                className="deletecart"
+                onClick={() => handleCartDelete(cartItem.id)}
+              >
+                Delete Cart
+              </button>
             </td>
           </tr>
         </table>
       </div>
+      
     </div>
   ));
-    return (
-      <div>
-        <div id="cartcard">
-          {thecart}
-          <h3>Total price of the goods in the Cart:</h3>
-          <p>Ksh: {price}</p>
-          <button className="checkout">checkout</button>
-        </div>
+
+  return (
+    <div>
+      <div id="cartcard">
+        {thecart}
+        <h3>Total price of the goods in the Cart:</h3>
+        <p>Ksh: {Total}</p>
+        
+        <button className="checkout">checkout</button>
       </div>
-    );
+    </div>
+  );
 }
 export default Cart
