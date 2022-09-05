@@ -15,21 +15,41 @@ function App() {
       .then(cakes => setCakes(cakes))
     
   }, [])
+  
   function onAddCart(cake) {
+    if (cart.indexOf(cake) !== -1) return;
     const mycart=[...cart, cake]
     setCart(mycart)
+    alert("Cart Added Successfully")
   }
- 
+  
+  function onDeleteCart(id) {
+    let filtered = cart.filter(cart => cart.id !== id)
+    setCart(filtered)
+  }
+   
   return (
     <>
-      <Header />
+      <Header cart={cart} />
       <Routes>
-        <Route exact path="/home" element={<Home cakes={cakes} onAddCart={onAddCart} />}></Route>
+        <Route
+          exact
+          path="/home"
+          element={<Home cakes={cakes} onAddCart={onAddCart} />}
+        ></Route>
         <Route exact path="/custom" element={<Custom />}></Route>
-        <Route exact path="/cart" element={<Cart  cart={cart} setCart={setCart} />}></Route>
-       
+        <Route
+          exact
+          path="/cart"
+          element={
+            <Cart
+              cart={cart}
+              setCart={setCart}
+              onDeleteCart={onDeleteCart}
+            />
+          }
+        ></Route>
       </Routes>
-      
     </>
   );
 }
