@@ -1,7 +1,8 @@
 
-import React, {useState, useEffect} from "react";
+import React, { useState } from "react";
+
 function Cart({ cart, onDeleteCart, setCart }) {
-  // const { id } = cart;
+  // const {name, price, image, quantity} = cart;
   const [amount, setAmount] = useState(1);
  let subTotal
   function handleChange(e) {
@@ -23,7 +24,6 @@ function Cart({ cart, onDeleteCart, setCart }) {
    
    
   const thecart = cart.map((cartItem) => (
-    
     <div key={cartItem.id} className="cartTable">
       <div>
         <table className="carttable">
@@ -57,13 +57,12 @@ function Cart({ cart, onDeleteCart, setCart }) {
                 className="deletecart"
                 onClick={() => handleCartDelete(cartItem.id)}
               >
-                Delete Cart
+                <i className="fa-solid fa-trash"></i>
               </button>
             </td>
           </tr>
         </table>
       </div>
-      
     </div>
   ));
 
