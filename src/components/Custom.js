@@ -1,7 +1,8 @@
 
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 function Custom() {
-   const [showForm, setShowForm] = useState(true);
+  const [showForm, setShowForm] = useState(true);
+  const [custom, setcustom]=useState([])
   const [customorders, setCustomeOrders] = useState({
     fullname: "",
     email: "",
@@ -27,7 +28,31 @@ function Custom() {
     setCustomeOrders({ ...customorders, [key]: e.target.value });
     setCustomers({ ...customer, [key]: e.target.value });
   }
- 
+  useEffect(() => {
+    fetch("http://localhost:8004/custom")
+      .then((res) => res.json())
+    .then((custom)=>setcustom(custom))
+  }, [])
+  const theCustom = custom.map((custom) => (
+    <div key={custom.id}>
+      <table>
+        <tbody>
+          <tr>
+            <th>
+              <h2>Order Details</h2>
+            </th>
+            <td>
+              <h3>fullname:{custom.fullname}</h3>
+              <h3>Email:{custom.email}</h3>
+              <h3>Phonenumber:{custom.phonenumber}</h3>
+              <h3>Cake:{custom.cake}</h3>
+              <h3>QNT:{custom.quantity}</h3>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  ));
   function handleOrders(e) {
     e.preventDefault();
     fetch("http://localhost:8004/customers", {
@@ -74,6 +99,7 @@ function Custom() {
           ...customorders,
           fullname: "",
           email: "",
+          cake:"",
           quantity: "",
           phonenumber: "",
           image: "",
@@ -186,7 +212,9 @@ function Custom() {
             Order
           </button>
         </form>
-      :!showForm}
+        : <div className="orders">
+          <div className="orderCard">{theCustom}</div>
+        </div>}
     </div>
   );
 }
