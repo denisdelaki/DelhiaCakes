@@ -10,12 +10,43 @@ function Custom() {
     image: "",
     description:""
   })
+  const [customer, setCustomers] = useState({
+    fullname: "",
+    email: "",
+    phonenumber: "",
+    cake: ""
+  });
   function handleChange(e) {
     const key = e.target.id;
     setCustomeOrders({ ...customorders, [key]: e.target.value });
+    setCustomers({ ...customer, [key]: e.target.value });
   }
+ 
   function handleOrders(e) {
     e.preventDefault();
+    fetch("http://localhost:8004/customers", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fullname: customer.fullname,
+        email: customer.email,
+        phonenumber: customer.phonenumber,
+        cake: customer.cake,
+      }),
+    })
+      .then((res) => res.json())
+      .then((customer) => {
+        setCustomers({
+          ...customer,
+          fullname: "",
+          email: "",
+          phonenumber: "",
+          cake: "",
+        });
+      })
+      ;
     fetch(" http://localhost:8004/custom", {
       method: "POST",
       headers: {
