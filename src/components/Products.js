@@ -6,7 +6,7 @@ function Product({ cake, onAddCart }) {
    let updatedlikes = {
       likes: cake.likes + 1,
    };
-    // window.location.reload()
+    window.location.reload()
     fetch(` http://localhost:8004/cakes/${id}`, {
       method: "PATCH",
       headers: {
