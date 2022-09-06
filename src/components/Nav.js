@@ -8,7 +8,10 @@ function Nav({cart}) {
       <NavLink to="/home">Home</NavLink>
       <NavLink to="/custom">Custom Orders</NavLink>
       <NavLink to="/cart">
-        InCart <span>{carts}</span>
+        <span>
+          {carts}
+          <i className="fa-solid fa-cart-shopping"></i>
+        </span>
       </NavLink>
     </nav>
   );
