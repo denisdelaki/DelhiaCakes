@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, {  useState } from "react";
 
 function Cart({ cart, onDeleteCart, setCart }) {
   // const {name, price, image, quantity} = cart;
@@ -8,9 +8,9 @@ function Cart({ cart, onDeleteCart, setCart }) {
   function handleChange(e) {
     setAmount(e.target.value);
   }
- 
+  
   function handleCartDelete(cart_id) {
-    fetch(`http://localhost:8004/cakes/${cart_id}`, {
+    fetch(`http://localhost:8004/cart/${cart_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
