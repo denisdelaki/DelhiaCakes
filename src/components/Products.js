@@ -1,7 +1,8 @@
 import React from "react";
 function Product({ cake, onAddCart }) {
 
-  const {id}=cake
+  const { id } = cake
+  
   function handleClicks() {
    let updatedlikes = {
       likes: cake.likes + 1,
@@ -17,6 +18,7 @@ function Product({ cake, onAddCart }) {
       .then(res => res.json())
       .then((updatedlikes))
   }
+  
     return (
       <div id="cakes">
         <div key={cake.id} className="cakecard">
