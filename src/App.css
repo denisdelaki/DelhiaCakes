@@ -71,14 +71,22 @@ nav a:focus{
 }
 .cartbutton{
   overflow: hidden;
-  height: 2.3rem;
+  height: 2rem;
   width: 7rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
  margin-left: 30%;
  border: none;
  position: relative;
- bottom: 1.4rem;
+ bottom: 1rem;
  box-shadow: 4px 4px 4px 3px;
+}
+.btn-likes{
+  position: relative;
+  height: 2rem;
+  width:6rem;
+  font-size: 1rem;
+  margin-left: 2rem;
+  bottom: 1rem;
 }
 .cartbutton:hover{
   cursor: progress;
@@ -127,6 +135,27 @@ box-shadow: 0.5rem 0.6rem;
 border: none;
 
 }
+.orders{
+  position: relative;
+  top: 12rem;
+}
+.orderCard{
+  position: relative;
+  top: 0rem;
+  left: 30%;
+  height: auto;
+  width: 50%;
+  background-color: #31525B;
+  color: #FFA101;
+}
+.toggleBtn{
+  color:#31525B;
+  background-color:white;
+  position: fixed;
+  top: 10rem;
+  height:2.5rem;
+  margin-left: 3rem;
+}
 .orderbutton{
   position: relative;
   left: 40%;
@@ -152,6 +181,7 @@ border: none;
 #cartcard{
   position: absolute;
   top: 10rem;
+  left: 25%;
   height:auto;
   width: 40%;
   padding: 2rem;
@@ -176,11 +206,16 @@ border: none;
   box-shadow: 1rem;
 
 }
+.fa-trash{
+  color:#31525B;
+  font-size: 1rem;
+}
+
 .deletecart{
   height:2rem ;
   width: 6rem;
   border: none;
-  background-color: #FFA101;
+  /* background-color: #FFA101; */
   color: #31525B;
   margin: 0.5rem;
 }
