@@ -12,20 +12,20 @@ function App() {
  
   // const {image, name, price, quantity}=cart
   useEffect(() => {
-    fetch("http://localhost:8004/cakes")
+    fetch("http://localhost:9292/cakes")
       .then(res => res.json())
       .then(cakes => setCakes(cakes))
     
   }, [])
  useEffect(() => {
-   fetch("http://localhost:8004/cart")
+   fetch("http://localhost:9292/cart")
      .then((res) => res.json())
    .then(cart=>setCart(cart))
  }, []);
   function onAddCart(cakes) {
    
     // const mycart=[...cart, cake]
-    fetch("http://localhost:8004/cart", {
+    fetch("http://localhost:9292/cart", {
       method: "POST",
       headers: {
          "Content-Type":"application/json",

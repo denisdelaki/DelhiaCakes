@@ -8,7 +8,7 @@ function Product({ cake, onAddCart }) {
       likes: cake.likes + 1,
    };
     window.location.reload()
-    fetch(` http://localhost:8004/cakes/${id}`, {
+    fetch(` http://localhost:9292/cakes/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type":"application/json",

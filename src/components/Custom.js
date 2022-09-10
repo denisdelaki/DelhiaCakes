@@ -29,7 +29,7 @@ function Custom() {
     setCustomers({ ...customer, [key]: e.target.value });
   }
   useEffect(() => {
-    fetch("http://localhost:8004/custom")
+    fetch("http://localhost:9292/orders")
       .then((res) => res.json())
     .then((custom)=>setcustom(custom))
   }, [])
@@ -55,7 +55,7 @@ function Custom() {
   ));
   function handleOrders(e) {
     e.preventDefault();
-    fetch("http://localhost:8004/customers", {
+    fetch("http://localhost:9292/customers", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -78,7 +78,7 @@ function Custom() {
         });
       })
       ;
-    fetch(" http://localhost:8004/custom", {
+    fetch(" http://localhost:9292/orders", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

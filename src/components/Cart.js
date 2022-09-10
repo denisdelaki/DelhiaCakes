@@ -10,7 +10,7 @@ function Cart({ cart, onDeleteCart, setCart }) {
   }
   
   function handleCartDelete(cart_id) {
-    fetch(`http://localhost:8004/cart/${cart_id}`, {
+    fetch(`http://localhost:9292/cart/${cart_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
