@@ -29,9 +29,9 @@ function Custom() {
     setCustomers({ ...customer, [key]: e.target.value });
   }
   useEffect(() => {
-    fetch("http://localhost:9292/orders")
+    fetch("https://delhiabakery.herokuapp.com/orders")
       .then((res) => res.json())
-    .then((custom)=>setcustom(custom))
+      .then((custom) => setcustom(custom));
   }, [])
   const theCustom = custom.map((custom) => (
     <div key={custom.id}>
@@ -55,7 +55,7 @@ function Custom() {
   ));
   function handleOrders(e) {
     e.preventDefault();
-    fetch("http://localhost:9292/customers", {
+    fetch("https://delhiabakery.herokuapp.com/customers", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -76,9 +76,8 @@ function Custom() {
           phonenumber: "",
           cake: "",
         });
-      })
-      ;
-    fetch(" http://localhost:9292/orders", {
+      });
+    fetch("https://delhiabakery.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -99,7 +98,7 @@ function Custom() {
           ...customorders,
           fullname: "",
           email: "",
-          cake:"",
+          cake: "",
           quantity: "",
           phonenumber: "",
           image: "",

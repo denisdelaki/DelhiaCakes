@@ -10,13 +10,13 @@ function Cart({ cart, onDeleteCart, setCart }) {
   }
   
   function handleCartDelete(cart_id) {
-    fetch(`http://localhost:9292/cart/${cart_id}`, {
+    fetch(`https://delhiabakery.herokuapp.com/cart/${cart_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
       .then(() => {
         onDeleteCart(cart_id);
-        alert("Cart Item deleted successfully")
+        alert("Cart Item deleted successfully");
       });
   }
   

@@ -12,31 +12,31 @@ function App() {
  
   // const {image, name, price, quantity}=cart
   useEffect(() => {
-    fetch("http://localhost:9292/cakes")
-      .then(res => res.json())
-      .then(cakes => setCakes(cakes))
+    fetch("https://delhiabakery.herokuapp.com/cakes")
+      .then((res) => res.json())
+      .then((cakes) => setCakes(cakes));
     
   }, [])
  useEffect(() => {
-   fetch("http://localhost:9292/cart")
+   fetch("https://delhiabakery.herokuapp.com/cart")
      .then((res) => res.json())
-   .then(cart=>setCart(cart))
+     .then((cart) => setCart(cart));
  }, []);
   function onAddCart(cakes) {
    
     // const mycart=[...cart, cake]
-    fetch("http://localhost:9292/cart", {
+    fetch("https://delhiabakery.herokuapp.com/cart", {
       method: "POST",
       headers: {
-         "Content-Type":"application/json",
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(cakes)
+      body: JSON.stringify(cakes),
     })
       .then((res) => res.json())
       .then((data) => {
-         if (cakes.indexOf(cart) !== -1) return ;
-        setCart(data)
-      })
+        if (cakes.indexOf(cart) !== -1) return;
+        setCart(data);
+      });
    
     // setCart(mycart)
     alert("Cart Added Successfully")

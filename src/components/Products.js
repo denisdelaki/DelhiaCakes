@@ -8,15 +8,15 @@ function Product({ cake, onAddCart }) {
       likes: cake.likes + 1,
    };
     window.location.reload()
-    fetch(` http://localhost:9292/cakes/${id}`, {
+    fetch(`https://delhiabakery.herokuapp.com/cakes/${id}`, {
       method: "PATCH",
       headers: {
-        "Content-Type":"application/json",
+        "Content-Type": "application/json",
       },
-      body:JSON.stringify(updatedlikes),
+      body: JSON.stringify(updatedlikes),
     })
-      .then(res => res.json())
-      .then((updatedlikes))
+      .then((res) => res.json())
+      .then(updatedlikes);
   }
   
     return (
