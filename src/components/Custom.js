@@ -85,7 +85,7 @@ function Custom() {
       body: JSON.stringify({
         fullname: customorders.fullname,
         email: customorders.email,
-        cake: customorders.cakecake,
+        cake: customorders.cake,
         quantity: customorders.quantity,
         phonenumber: customorders.phonenumber,
         image: customorders.image,
